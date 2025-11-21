@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video</title>
+    <title>PSCC Video</title>
     <style>
         * {
             margin: 0;
@@ -14,9 +14,25 @@
         body {
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 300px;
+            height: auto;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #ffffff;
         }
 
         .video-container {
@@ -31,15 +47,71 @@
             height: 100%;
             border: none;
         }
+
+        footer {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footer-left a {
+            margin-bottom: 10px;
+        }
+
+        .linkedin-icon {
+            width: 30px;
+            height: 30px;
+            fill: #0A66C2;
+        }
+
+        .copyright {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .footer-right a img {
+            max-width: 120px;
+            height: auto;
+        }
     </style>
 </head>
 <body>
-    <div class="video-container">
-        <iframe
-            src="https://www.canva.com/design/DAG5IfNS8ko/e6n4UdrtVT36IVw4aKiMOw/watch?embed"
-            allowfullscreen="allowfullscreen"
-            allow="fullscreen">
-        </iframe>
-    </div>
+    <header>
+        <img src="PSCC-Data_horizontal_couleur.png" alt="PSCC Data">
+    </header>
+
+    <main>
+        <div class="video-container">
+            <iframe
+                src="https://www.canva.com/design/DAG5IfNS8ko/e6n4UdrtVT36IVw4aKiMOw/watch?embed"
+                allowfullscreen="allowfullscreen"
+                allow="fullscreen">
+            </iframe>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <a href="https://www.linkedin.com/company/paris-saclay-cancer-cluster" target="_blank" rel="noopener noreferrer">
+                <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+            </a>
+            <span class="copyright">&copy; 2025 Paris-Saclay Cancer Cluster</span>
+        </div>
+        <div class="footer-right">
+            <a href="https://www.parissaclaycancercluster.org/" target="_blank" rel="noopener noreferrer">
+                <img src="PSCC_Logo_black.png" alt="Paris-Saclay Cancer Cluster">
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
