@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 960px;
+            aspect-ratio: 16/9;
+            padding: 20px;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <iframe
+            src="https://www.canva.com/design/DAG5IfNS8ko/e6n4UdrtVT36IVw4aKiMOw/watch?embed"
+            allowfullscreen="allowfullscreen"
+            allow="fullscreen">
+        </iframe>
+    </div>
+</body>
+</html>
