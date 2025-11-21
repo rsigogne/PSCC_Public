@@ -42,10 +42,11 @@
             padding: 20px;
         }
 
-        .video-container iframe {
+        .video-container video {
             width: 100%;
             height: 100%;
             border: none;
+            border-radius: 8px;
         }
 
         footer {
@@ -90,11 +91,10 @@
 
     <main>
         <div class="video-container">
-            <iframe
-                src="https://www.canva.com/design/DAG5IfNS8ko/e6n4UdrtVT36IVw4aKiMOw/watch?embed"
-                allowfullscreen="allowfullscreen"
-                allow="fullscreen">
-            </iframe>
+            <video controls autoplay muted loop>
+                <source src="Vidéo PSCC Data portal_191125.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </main>
 
