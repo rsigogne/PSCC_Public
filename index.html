@@ -33,8 +33,18 @@
         main {
             flex: 1;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+        }
+
+        .announcement {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            padding: 0 20px;
         }
 
         .video-container {
@@ -92,6 +102,7 @@
     </header>
 
     <main>
+        <p class="announcement">Stay tuned, the PSCC Data Portal is under development. Coming soon.</p>
         <div class="video-container">
             <video controls autoplay muted loop>
                 <source src="Vidéo PSCC Data portal_191125.mp4" type="video/mp4">
