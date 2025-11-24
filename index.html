@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PSCC Video</title>
+    <title>PSCC Data</title>
     <link rel="icon" href="https://www.parissaclaycancercluster.org/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="https://www.parissaclaycancercluster.org/favicon.ico" type="image/x-icon">
     <style>
@@ -33,15 +33,33 @@
         main {
             flex: 1;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
 
-        .video-container {
-            width: 100%;
-            max-width: 960px;
-            aspect-ratio: 16/9;
+        .announcement {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            padding: 0 20px;
+        }
+
+        .content-row {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 20px;
             padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        .video-container {
+            flex: 1;
+            max-width: 800px;
+            min-height: 450px;
         }
 
         .video-container video {
@@ -84,6 +102,67 @@
             max-width: 120px;
             height: auto;
         }
+
+        .info-card {
+            background: linear-gradient(135deg, #2a8a8a 0%, #3da5a5 50%, #5bb8b8 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            max-width: 350px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media (max-width: 900px) {
+            .content-row {
+                flex-direction: column;
+            }
+            .video-container {
+                max-width: 100%;
+            }
+        }
+
+        .info-card .year {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .info-card .year strong {
+            font-size: 28px;
+        }
+
+        .info-card hr {
+            border: none;
+            border-top: 2px solid rgba(255, 255, 255, 0.5);
+            margin: 20px 0;
+        }
+
+        .info-card .stat-number {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .info-card .stat-label {
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        .info-card .stat-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .info-card .stat-subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
     </style>
 </head>
 <body>
@@ -92,11 +171,27 @@
     </header>
 
     <main>
-        <div class="video-container">
-            <video controls autoplay muted loop>
-                <source src="Vidéo PSCC Data portal_191125.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        <p class="announcement">Stay tuned, the PSCC Data Portal is under development. Coming soon.</p>
+
+        <div class="content-row">
+            <div class="video-container">
+                <video controls autoplay muted loop>
+                    <source src="Vidéo PSCC Data portal_191125.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="info-card">
+                <p class="year">Starting in <strong>2026:</strong></p>
+                <hr>
+                <p class="stat-number">275,000+</p>
+                <p class="stat-label">patients</p>
+                <p class="stat-title">All types of cancer</p>
+                <p class="stat-subtitle">solid, hematologic, and pediatric</p>
+                <p class="stat-number">103</p>
+                <p class="stat-label">variables for patient screening</p>
+                <p class="stat-subtitle">clinical data, images, biological samples</p>
+            </div>
         </div>
     </main>
 
